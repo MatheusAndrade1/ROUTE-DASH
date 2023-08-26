@@ -190,23 +190,6 @@ function route_protocol.dissector(buffer, pinfo, tree)
 
     -- Routine to save the data
     SaveToFile(TSI_value, TOI_value, length, position, buffer)
-    --if not exists(".\\metadata") then
-    --    os.execute("mkdir metadata")
-    --end 
-    --local filehandle = ""
-    --if TSI_value == 0 then
-    --    filehandle = io.open("metadata\\description_"..TSI_value, "a+")
-    --else
-    --    filehandle = io.open("metadata\\description_"..TSI_value.."_"..TOI_value, "a+")
-    --end
-    --length = length - 1
-    --for i=0,length,1 
-    --do
-    --    local value = tonumber(tostring(buffer(position + i, 1)),16)
-    --    filehandle:write(string.char(value))
-    --end
-    --filehandle:close()
-    -------
 end
 
 function SaveToFile(TSI, TOI, length, position, buffer)
